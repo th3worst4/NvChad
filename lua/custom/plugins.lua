@@ -75,6 +75,12 @@ local plugins = {
       "rcarriga/nvim-notify",
       }
   },
+  {
+  "lervag/vimtex",
+  init = function()
+    -- Use init for configuration, don't use the more common "config".
+  end
+  },
 
   -- To make a plugin not be loaded
   -- {
