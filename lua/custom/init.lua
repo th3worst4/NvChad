@@ -22,3 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.softtabstop = 2
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"tex", "sty"},
+  command = "Lazy load vimtex neotex"
+})

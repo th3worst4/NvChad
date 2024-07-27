@@ -75,7 +75,16 @@ local plugins = {
       "rcarriga/nvim-notify",
       }
   },
-
+  {
+    "lervag/vimtex",
+    init = function()
+      -- Use init for configuration, don't use the more common "config".
+    end
+  },
+  {
+    "donRaphaco/neotex",
+  }
+,
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
