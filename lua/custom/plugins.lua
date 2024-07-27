@@ -32,7 +32,7 @@ local plugins = {
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
-    event = "InsertEnter",
+    lazy = false,
     config = function()
       require("better_escape").setup()
     end,
@@ -89,6 +89,11 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+{
+  "neoclide/coc.nvim",
+    branch = "release",
+},
 }
+
 
 return plugins
