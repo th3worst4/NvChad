@@ -98,10 +98,6 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
-{
-  "neoclide/coc.nvim",
-    branch = "release",
-},
 }
 
 
