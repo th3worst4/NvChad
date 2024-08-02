@@ -83,6 +83,15 @@ local plugins = {
   },
   {
     "donRaphaco/neotex",
+  },
+  {
+    "mfussenegger/nvim-jdtls";
+    config = function ()
+      require('jdtls').setup{
+        cmd = {'/usr/bin/jdtls'},
+        root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+      }
+    end
   }
 ,
   -- To make a plugin not be loaded

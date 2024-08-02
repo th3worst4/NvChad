@@ -41,6 +41,8 @@ M.mason = {
 
     -- python stuff
     "python-lsp-server",
+
+    "jdtls"
   },
 }
 

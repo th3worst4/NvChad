@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "pylsp"}
+local servers = { "html", "cssls", "tsserver", "clangd", "pylsp", "jdtls"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,27 +13,27 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.rust_analyzer.setup({
-  on_attach = on_attach,
-  settings = {
-    ["rust-analyzer"] = {
-      imports = {
-          granularity = {
-              group = "module",
-          },
-          prefix = "self",
-      },
-      cargo = {
-          buildScripts = {
-              enable = true,
-          },
-      },
-      procMacro = {
-          enable = true
-      },
-    }
-  }
-})
+--lspconfig.rust_analyzer.setup({
+--  on_attach = on_attach,
+--  settings = {
+--    ["rust-analyzer"] = {
+--      imports = {
+--          granularity = {
+--              group = "module",
+--          },
+--          prefix = "self",
+--      },
+--      cargo = {
+--          buildScripts = {
+--              enable = true,
+--          },
+--      },
+--      procMacro = {
+--          enable = true
+--      },
+--    }
+--  }
+--})
 
 -- 
 -- lspconfig.pyright.setup { blabla}
